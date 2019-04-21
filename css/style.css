@@ -1,0 +1,59 @@
+@font-face {
+    font-family: FG;
+    font-weight: 400;
+    font-style: normal;
+    src: url(/font/FoundersGroteskLight.woff2) format("woff2"),
+        url(/font/FoundersGroteskLight.woff) format("woff")
+}
+
+@font-face {
+    font-family: FG;
+    font-weight: 500;
+    font-style: normal;
+    src: url(/font/FoundersGroteskMedium.woff2) format("woff2"),
+        url(/font/FoundersGroteskMedium.woff) format("woff")
+}
+
+body,
+div,
+footer,
+h1,
+header,
+html,
+main,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-family: inherit;
+}
+
+body {
+    background-color: #181826;
+}
+
+main {
+    height: 100vh;
+}
+
+h1 {
+    color: #B7B6C1;
+    font-size: 8em;
+}
+
+#header-blind {
+    position: absolute;
+    left: 25vw;
+    top: 25vh;
+}
+
+#header-seagull {
+    position: absolute;
+    right: 25vw;
+    bottom: 35vh;
+}
+html,body,section{
+    height: 100%;
+    overflow: hidden;
+}
