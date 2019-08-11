@@ -1,50 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blind Seagull</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="common/onepage-scroll-master/jquery.onepage-scroll.min.js"></script>
-    <link rel="stylesheet" href="common/onepage-scroll-master/onepage-scroll.css">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English|Playfair+Display:900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="main">
-        <section>
-            <header>
-                <h1 id="header-blind">BLIND</h1>
-                <h1 id="header-seagull">SEAGULL</h1>
-                <video id="video" width="100%" autoplay="autoplay" loop="loop" preload="auto" muted="muted">
-                    <!--<source src="video/video_VP8_x264.mp4" type="video/mp4"/>-->
-                    <source src="video/video_VP8.webm" type="video/webm" />
-                </video>
-            </header>
-        </section>
-        <section>
-            <main>
-            </main>
-        </section>
+    <div class="wrapper overflow-hidden">
+        <div id="cover" class=" text-center d-flex justify-content-center align-items-center">
+            <span>Blind Seagull</span>
+        </div>
     </div>
+    <div class="content-section container" id="discography">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="heading-section col-md-12 text-center">
+                    <h2>Discography</h2>
+                </div>
+            </div>
+            <div id="discography" class="row">
+                <div class="discography-item col-xl-3 col-md-4 col-sm-6">
+                    <div class="discography-thumb">
+                        <img src="img/album_covers/10.le_dernier_rendez-vous.jpg">
+                    </div>
+                </div>
+                <div class="discography-item col-xl-3 col-md-4 col-sm-6">
+                    <div class="discography-thumb">
+                        <img src="img/album_covers/9.balance.jpg">
+                    </div>
+                </div>
+                <div class="discography-item col-xl-3 col-md-4 col-sm-6">
+                    <div class="discography-thumb">
+                        <img src="img/album_covers/8.pressure.jpg">
+                    </div>
+                </div>
+                <div class="discography-item col-xl-3 col-md-4 col-sm-6">
+                    <div class="discography-thumb">
+                        <img src="img/album_covers/7.live_in_december.jpg">
+                    </div>
+                </div>
+                <div class="discography-item col-xl-3 col-md-4 col-sm-6">
+                    <div class="discography-thumb">
+                        <img src="img/album_covers/6.confusion.jpg">
+                    </div>
+                </div>
+                <div class="discography-item col-xl-3 col-md-4 col-sm-6">
+                    <div class="discography-thumb">
+                        <img src="img/album_covers/5.filth.jpg">
+                    </div>
+                </div>
+                <div class="discography-item col-xl-3 col-md-4 col-sm-6">
+                    <div class="discography-thumb">
+                        <img src="img/album_covers/4.monologue.jpg">
+                    </div>
+                </div>
+                <div class="discography-item col-xl-3 col-md-4 col-sm-6">
+                    <div class="discography-thumb">
+                        <img src="img/album_covers/3.endurance.jpg">
+                    </div>
+                </div>
+                <div class="discography-item col-xl-3 col-md-4 col-sm-6">
+                    <div class="discography-thumb">
+                        <img src="img/album_covers/2.ribs.jpg">
+                    </div>
+                </div>
+                <div class="discography-item col-xl-3 col-md-4 col-sm-6">
+                    <div class="discography-thumb">
+                        <img src="img/album_covers/1.mess.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
-<script>
-$(".main").onepage_scroll({
-    sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
-    easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-    animationTime: 1000, // AnimationTime let you define how long each section takes to animate
-    pagination: false, // You can either show or hide the pagination. Toggle true for show, false for hide.
-    updateURL: false, // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-    beforeMove: function(index) {}, // This option accepts a callback function. The function will be called before the page moves.
-    afterMove: function(index) {}, // This option accepts a callback function. The function will be called after the page moves.
-    loop: false, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-    keyboard: true, // You can activate the keyboard controls
-    responsiveFallback: false, // You can fallback to normal page scroll by defining the width of the browser in which
-    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-    // the browser's width is less than 600, the fallback will kick in.
-    direction: "vertical" // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
-});
-</script>
 
 </html>
