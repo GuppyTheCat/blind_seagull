@@ -3,10 +3,6 @@
     src: url("/fonts/Founders_Grotesk_Medium.otf") format("opentype");
 }
 
-html {
-    --color-main: #a1adb9;
-}
-
 body {
     background: url(../img/black_bg.jpg);
     background-position: center;

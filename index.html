@@ -5,10 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blind Seagull</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <link href="css/plyr.css" rel="stylesheet">
+    <script type="text/javascript" src="js/plyr.min.js"></script>
+    <script type="text/javascript" src="js/plyr.polyfilled.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -87,10 +92,13 @@
             </div>
             <div id="video" class="row">
                 <div class="video-item col-12 d-flex justify-content-center">
-                    <iframe width="720" height="405" src="https://www.youtube.com/embed/D1XhAV9rDtw?controls=0&iv_load_policy=3&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="D1XhAV9rDtw"></div>
                 </div>
                 <div class="video-item col-12 d-flex justify-content-center">
-                    <iframe width="720" height="405" src="https://www.youtube.com/embed/RQ36GDfOfT8?controls=0&iv_load_policy=3&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="720" height="405" src="https://www.youtube.com/embed/D1XhAV9rDtw?iv_load_policy=3&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-item col-12 d-flex justify-content-center">
+                    <iframe width="720" height="405" src="https://www.youtube.com/embed/RQ36GDfOfT8?iv_load_policy=3&rel=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
