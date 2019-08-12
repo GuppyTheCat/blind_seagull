@@ -36,8 +36,13 @@ body {
     margin-bottom: 30px;
 }
 
-.discography-item .discography-thumb img {
+.discography-item .discography-thumb img{
     width: 100%;
+}
+
+.discography-item .mask{
+    position: absolute;
+    height: 100%;
 }
 
 .heading-section {
