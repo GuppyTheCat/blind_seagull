@@ -1,6 +1,12 @@
-@font-face {
+/*@font-face {
     font-family: FoundersGrotesk;
     src: url("/fonts/Founders_Grotesk_Medium.otf") format("opentype");
+}*/
+@font-face {
+    font-family: 'Playfair Display', serif;
+}
+@font-face {
+    font-family: 'Muli', sans-serif;
 }
 
 body {
@@ -10,7 +16,6 @@ body {
     width: 100%;
     height: 100vh;
     color: #a1adb9;
-    font-family: FoundersGrotesk;
 }
 
 #cover {
@@ -19,8 +24,13 @@ body {
     background-size: cover;
     width: 100%;
     height: 100vh;
-    font-size: 15vmin;
+}
+
+#cover span{
+    font-family: Playfair Display;
+    font-size: 20vmin;
     color: white;
+    line-height: 100%;
 }
 
 #wrapper {
@@ -36,17 +46,37 @@ body {
     margin-bottom: 30px;
 }
 
+.discography-item .discography-thumb{
+    position: relative;
+}
+
 .discography-item .discography-thumb img{
     width: 100%;
 }
 
-.discography-item .mask{
+.discography-popup{
+    display: none;
     position: absolute;
     height: 100%;
+    width: 100%;
+    top:0;
+    right:0;
+    background-color: #333;
+    /*opacity: 0.75;*/
+    opacity: 0;
+
+    transition: all 300ms ease-in-out;
 }
 
-.heading-section {
+
+.discography-popup i{
+    font-size: 3rem;
+}
+
+.heading-section h2 {
     margin-bottom: 60px;
+    font-family: 'Muli', sans-serif;
+    font-size: 1.75rem;
 }
 
 .video-item{
