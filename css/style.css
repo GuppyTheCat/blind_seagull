@@ -47,11 +47,11 @@ body {
     margin-bottom: 30px;
 }
 
-.discography-item .discography-thumb{
+.discography-thumb{
     position: relative;
 }
 
-.discography-item .discography-thumb img{
+.discography-thumb img{
     width: 100%;
 }
 
