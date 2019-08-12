@@ -24,7 +24,7 @@ span{
     font-weight: 400;
 }
 
-#cover {
+.cover {
     background: url(../img/cover2.jpg);
     background-position: center;
     background-size: cover;
@@ -32,7 +32,7 @@ span{
     height: 100vh;
 }
 
-#cover span{
+.cover span{
     font-family: Playfair Display;
     font-size: 20vmin;
     color: white;  
@@ -86,7 +86,8 @@ span{
 
 .discography-popup-label span{
     font-size: 2rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.04em;
+    line-height: 100%;
 }
 
 .heading-section h2 {
