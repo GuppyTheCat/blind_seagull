@@ -11,9 +11,13 @@ $(document).ready(function() {
         }
     );
     $("i").click(function() {
-        if ($(this).parent().parent().css("display") == "flex") {
+        var parent = $(this).parent().parent();
+        if (parent.attr("id") == "discography-popup") {
+            if (parent.css("display") == "flex") {
+                window.open($(this).attr("data-link"));
+            }
+        } else {
             window.open($(this).attr("data-link"));
-            return false;
         }
     });
 });

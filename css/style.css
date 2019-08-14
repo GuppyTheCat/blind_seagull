@@ -5,6 +5,7 @@
 @font-face {
     font-family: 'Playfair Display', serif;
 }
+
 @font-face {
     font-family: 'Muli', sans-serif;
 }
@@ -19,9 +20,23 @@ body {
     color: #a1adb9;
 }
 
-span{
+span {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
+}
+
+#top-header {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    font-size: 2rem;
+    color: #424242;
+}
+
+#wrapper {
+    height: 100vh;
 }
 
 .cover {
@@ -32,18 +47,13 @@ span{
     height: 100vh;
 }
 
-.cover span{
+.cover span {
     font-family: Playfair Display;
     font-size: 20vmin;
-    color: white;  
+    color: white;
     line-height: 100%;
     font-weight: 700;
 }
-
-#wrapper {
-    height: 100vh;
-}
-
 
 .content-section {
     margin-top: 80px;
@@ -55,37 +65,38 @@ span{
     padding-left: 20px;
 }
 
-.discography-thumb{
+.discography-thumb {
     position: relative;
 }
 
-.discography-thumb img{
+.discography-thumb img {
     width: 100%;
 }
 
-.discography-popup{
+.discography-popup {
     display: none;
     position: absolute;
     height: 100%;
     width: 100%;
-    top:0;
-    right:0;
+    top: 0;
+    right: 0;
     background-color: #333;
     opacity: 0;
     margin-left: 0;
     margin-right: 0;
 }
 
-.discography-popup div i{
-    font-size: 3rem;
+.discography-popup div i {
+    font-size: 2.25rem;
 }
 
-.discography-popup-bottom, .discography-popup-label{
+.discography-popup-bottom,
+.discography-popup-label {
     height: 33.33%;
 }
 
-.discography-popup-label span{
-    font-size: 2rem;
+.discography-popup-label {
+    font-size: 1.5rem;
     letter-spacing: 0.04em;
     line-height: 100%;
 }
@@ -96,7 +107,7 @@ span{
     font-size: 1.75rem;
 }
 
-.video-item{
+.video-item {
     margin-bottom: 30px;
     width: 100%;
 }
