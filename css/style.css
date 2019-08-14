@@ -20,7 +20,7 @@ body {
     color: #a1adb9;
 }
 
-i:hover{
+i:hover {
     cursor: pointer;
 }
 
@@ -130,7 +130,11 @@ span {
     font-size: 1.75rem;
 }
 
-.main-header-links{
+.main-header-bars {
+    font-size: 1.5rem;
+}
+
+.main-header-links {
     font-size: 1rem;
     font-family: 'Muli', sans-serif;
 }
@@ -138,4 +142,10 @@ span {
 .video-item {
     margin-bottom: 30px;
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    #main-header {
+        height: 50px;
+    }
 }
