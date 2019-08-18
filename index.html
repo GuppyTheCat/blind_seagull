@@ -10,7 +10,7 @@
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -18,7 +18,9 @@
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
+    <!--JQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
@@ -39,27 +41,27 @@
     </div>
     <div id="main-header" class="d-flex">
         <div id="main-header-wrapper">
-            <div class="row h-100">
-                <div class="col-3">
+            <nav class="navbar navbar-expand-md navbar-dark elegant-color-dark">
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarList" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarList">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item mx-auto active">
+                            <a class="nav-link" href="#top-header">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item mx-auto">
+                            <a class="nav-link" href="#discography-section">MUSIC</a>
+                        </li>
+                        <li class="nav-item mx-auto">
+                            <a class="nav-link" href="#video-section">VIDEO</a>
+                        </li>
+                        <li class="nav-item mx-auto">
+                            <a class="nav-link" href="#">EVENTS</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-6 row text-center justify-content-center align-items-center main-header-links">
-                    <div class="col-3">
-                        HOME
-                    </div>
-                    <div class="col-3">
-                        MUSIC
-                    </div>
-                    <div class="col-3">
-                        VIDEO
-                    </div>
-                    <div class="col-3">
-                        EVENTS
-                    </div>
-                </div>
-                <div class="col-3 text-right container-fluid d-xs-flex d-md-none mt-auto mb-auto main-header-bars">
-                    <i class="fa fa-bars"></i>
-                </div>
-            </div>
+            </nav>
         </div>
     </div>
     <div class="wrapper overflow-hidden glitch">
@@ -75,7 +77,7 @@
         <div class="cover glitch__img">
         </div>
     </div>
-    <div class="content-section container" id="discography_section">
+    <div class="content-section container" id="discography-section">
         <div class="container-fluid">
             <div class="row">
                 <div class="heading-section col-md-12 text-center">
@@ -293,7 +295,7 @@
             </div>
         </div>
     </div>
-    <div class="content-section container" id="video_section">
+    <div class="content-section container" id="video-section">
         <div class="container-fluid">
             <div class="row">
                 <div class="heading-section col-md-12 text-center">

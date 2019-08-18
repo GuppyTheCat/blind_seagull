@@ -32,6 +32,14 @@ $(document).ready(function() {
     };
 
 
+    /*$(window).scroll(function() {
+        if ($("#top-header").isInViewport()) {
+            $("#main-header").css("top","75px");
+        } else {
+            $("#main-header").css("top","0");
+        }
+    });*/
+
     $(window).scroll(function() {
         if ($("#top-header").isInViewport()) {
             $("#main-header").removeClass('scrolled');
