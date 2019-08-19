@@ -31,20 +31,20 @@ span {
 
 #main-header {
     position: fixed;
-    top: 75px;
+    top: 65px;
     left: 0;
     width: 100%;
     z-index: 9999;
-    -webkit-transition: all 150ms ease-in-out;
-    -moz-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 
 .scrolled {
     top: 0 !important;
-    -webkit-transition: all 150ms ease-in-out;
-    -moz-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 
 }
 
@@ -93,7 +93,7 @@ span {
 
 @media screen and (min-width: 768px) {
     .content-section {
-        margin-top: 100px;
+        margin-top: 110px;
     }
 }
 
