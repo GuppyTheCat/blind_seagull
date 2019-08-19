@@ -47,4 +47,13 @@ $(document).ready(function() {
             $("#main-header").addClass('scrolled');
         }
     });
+
+    $(".nav-link").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 1000);
+    });
+    
+    $('.navbar-collapse a').click(function() {
+        $(".navbar-collapse").collapse('hide');
+    });
 });

@@ -91,6 +91,12 @@ span {
     margin-top: 80px;
 }
 
+@media screen and (min-width: 768px) {
+    .content-section {
+        margin-top: 100px;
+    }
+}
+
 .discography-item {
     margin-bottom: 30px;
     padding-right: 20px;
