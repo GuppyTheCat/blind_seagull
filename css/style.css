@@ -10,6 +10,10 @@
     font-family: 'Muli', sans-serif;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body {
     background: url(../img/black_bg.jpg);
     background-position: center;
@@ -124,8 +128,9 @@ span {
     margin-right: 0;
 }
 
-.discography-popup div i {
-    font-size: 2.25rem;
+.discography-popup-icons i {
+    /*font-size: 2.25rem;*/
+    padding: 0 0.5rem;
 }
 
 .discography-popup-bottom,

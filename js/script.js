@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	
+    //Changing youtube iframe size
     var width = $(window).width();
     var height = $(window).height();
     $("iframe").each(function(index) {
@@ -28,7 +30,7 @@ $(document).ready(function() {
     });
 
 
-
+    //Hover on album thumb function
     $(".discography-thumb").hover(
         function() {
             var item = $(this).children(".discography-popup");
@@ -40,6 +42,7 @@ $(document).ready(function() {
             item.animate({ opacity: 0 }, { duration: 200 }, function() { item.css("display", "none") });
         }
     );
+
     $("i").click(function() {
         var parent = $(this).parent().parent();
         if (parent.hasClass("discography-popup")) {
@@ -51,6 +54,7 @@ $(document).ready(function() {
         }
     });
 
+    //Header animation
     $.fn.isInViewport = function() {
         var elementTop = $(this).offset().top;
         var elementBottom = elementTop + $(this).outerHeight();
@@ -61,15 +65,6 @@ $(document).ready(function() {
         return elementBottom > viewportTop && elementTop < viewportBottom;
     };
 
-
-    /*$(window).scroll(function() {
-        if ($("#top-header").isInViewport()) {
-            $("#main-header").css("top","75px");
-        } else {
-            $("#main-header").css("top","0");
-        }
-    });*/
-
     $(window).scroll(function() {
         if ($("#top-header").isInViewport()) {
             $("#main-header").removeClass('scrolled');
@@ -78,6 +73,7 @@ $(document).ready(function() {
         }
     });
 
+    //Navigation events
     $(".nav-link").click(function(event) {
         event.preventDefault();
         $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 1000);
@@ -87,4 +83,33 @@ $(document).ready(function() {
         $(".navbar-collapse").collapse('hide');
     });
 
+    //Resizing album-popup icons and labels
+    $.fn.sizeChanged = function(handleFunction) {
+        var element = this;
+        var lastWidth = element.width();
+        var lastHeight = element.height();
+
+        setInterval(function() {
+            if (lastWidth === element.width() && lastHeight === element.height())
+                return;
+            if (typeof(handleFunction) == 'function') {
+                handleFunction({ width: lastWidth, height: lastHeight }, { width: element.width(), height: element.height() });
+                lastWidth = element.width();
+                lastHeight = element.height();
+            }
+        }, 100);
+        return element;
+    };
+
+    var popup_width = $(".discography-popup").width();
+    $(".discography-popup-label").css('font-size', popup_width / 10);
+    $(".discography-popup-icons").css('font-size', popup_width / 7.5);
+
+    $(window).on('resize', function() {
+        if ($(".discography-popup").sizeChanged()) {
+            var popup_width = $(".discography-popup").width();
+            $(".discography-popup-label").css('font-size', popup_width / 10);
+            $(".discography-popup-icons").css('font-size', popup_width / 7.5);
+        }
+    });
 });
