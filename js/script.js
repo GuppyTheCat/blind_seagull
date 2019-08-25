@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	
+
     //Changing youtube iframe size
     var width = $(window).width();
     var height = $(window).height();
@@ -29,6 +29,35 @@ $(document).ready(function() {
         });
     });
 
+    //Resizing album-popup icons and labels
+    $.fn.sizeChanged = function(handleFunction) {
+        var element = this;
+        var lastWidth = element.width();
+        var lastHeight = element.height();
+
+        setInterval(function() {
+            if (lastWidth === element.width() && lastHeight === element.height())
+                return;
+            if (typeof(handleFunction) == 'function') {
+                handleFunction({ width: lastWidth, height: lastHeight }, { width: element.width(), height: element.height() });
+                lastWidth = element.width();
+                lastHeight = element.height();
+            }
+        }, 100);
+        return element;
+    };
+
+    var popup_width = $(".discography-popup").width();
+    $(".discography-popup-label").css('font-size', popup_width / 10);
+    $(".discography-popup-icons").css('font-size', popup_width / 7.5);
+
+    $(window).on('resize', function() {
+        if ($(".discography-popup").sizeChanged()) {
+            var popup_width = $(".discography-popup").width();
+            $(".discography-popup-label").css('font-size', popup_width / 10);
+            $(".discography-popup-icons").css('font-size', popup_width / 7.5);
+        }
+    });
 
     //Hover on album thumb function
     $(".discography-thumb").hover(
@@ -83,33 +112,4 @@ $(document).ready(function() {
         $(".navbar-collapse").collapse('hide');
     });
 
-    //Resizing album-popup icons and labels
-    $.fn.sizeChanged = function(handleFunction) {
-        var element = this;
-        var lastWidth = element.width();
-        var lastHeight = element.height();
-
-        setInterval(function() {
-            if (lastWidth === element.width() && lastHeight === element.height())
-                return;
-            if (typeof(handleFunction) == 'function') {
-                handleFunction({ width: lastWidth, height: lastHeight }, { width: element.width(), height: element.height() });
-                lastWidth = element.width();
-                lastHeight = element.height();
-            }
-        }, 100);
-        return element;
-    };
-
-    var popup_width = $(".discography-popup").width();
-    $(".discography-popup-label").css('font-size', popup_width / 10);
-    $(".discography-popup-icons").css('font-size', popup_width / 7.5);
-
-    $(window).on('resize', function() {
-        if ($(".discography-popup").sizeChanged()) {
-            var popup_width = $(".discography-popup").width();
-            $(".discography-popup-label").css('font-size', popup_width / 10);
-            $(".discography-popup-icons").css('font-size', popup_width / 7.5);
-        }
-    });
 });
