@@ -33,22 +33,21 @@ $(document).ready(function() {
     $('.slick-discography').slick({
         dots: true,
         infinite: false,
-        speed: 300,
+        speed: 200,
         slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToScroll: 3,
         responsive: [{
                 breakpoint: 1280,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true
+                    slidesToScroll: 2
                 }
             },
             {
                 breakpoint: 940,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                     infinite: true
                 }
             },

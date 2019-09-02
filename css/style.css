@@ -58,25 +58,14 @@ span {
 
 #top-header {
     position: absolute;
-    top: 5px;
-    right: 0;
+    height: 50px;
     width: 100%;
-    z-index: 1000;
-    font-size: 2rem;
-    color: #424242;
 }
 
 #wrapper {
     height: 100vh;
 }
 
-#events-section {
-    background-color: white;
-    opacity: 0.2;
-    width: 100%;
-    height: 100px;
-
-}
 
 .cover {
     background: url(../img/cover2.jpg);
@@ -186,12 +175,53 @@ span {
         padding-right: 1rem;
     }
 }
-.slick-discography-item{
+
+.slick-discography-item {
     position: relative;
     margin-right: 10px;
     margin-left: 10px;
 }
 
-.slick-discography-item img{
+.slick-discography-item img {
     width: 100%;
+}
+
+#contacts {
+    width: 100%;
+    z-index: 1000;
+    font-size: 2rem;
+    color: #a1adb9;
+}
+
+#contacts i {
+    opacity: 0.8;
+}
+
+#contacts p {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+#contacts p a,
+#contacts p a:visited,
+#contacts p a:active {
+    color: #424242;
+}
+
+#contacts-icons{
+    margin-top: 20px;
+}
+
+#top-button{
+    width: 150px;
+    height: 40px;
+    background-color: #424242;
+    opacity: 0.7;
+    float: right;
+    text-align: center;
+}
+#top-button a,
+#top-button a:visited,
+#top-button a:active {
+    color: #a1adb9;
 }
