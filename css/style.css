@@ -133,7 +133,6 @@ span {
 }
 
 .discography-popup-icons i {
-    /*font-size: 2.25rem;*/
     padding: 0 0.5rem;
 }
 
@@ -186,4 +185,13 @@ span {
     #navbarList ul li {
         padding-right: 1rem;
     }
+}
+.slick-discography-item{
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.slick-discography-item img{
+    width: 100%;
 }
