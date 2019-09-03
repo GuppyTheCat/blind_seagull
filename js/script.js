@@ -120,7 +120,7 @@ $(document).ready(function() {
     });
 
     //Magnific popup
-    $('.video-item').magnificPopup({
+    $('.video-popup i').magnificPopup({
         type: 'iframe'
     });
 
