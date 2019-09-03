@@ -83,9 +83,9 @@ $(document).ready(function() {
                 window.open($(this).attr("data-link"));
             }
         } else {
-        	if ($(this).parent().hasClass("video-popup")){
-        		return 0;
-        	}
+            if ($(this).parent().hasClass("video-popup")) {
+                return 0;
+            }
             window.open($(this).attr("data-link"));
         }
     });
@@ -147,4 +147,7 @@ $(document).ready(function() {
         }
     );
 
+    //Smooth scroll
+    $("html").smoothWheel();
 });
+
