@@ -1,34 +1,5 @@
 $(document).ready(function() {
 
-    //Changing youtube iframe size
-    var width = $(window).width();
-    var height = $(window).height();
-    $("iframe").each(function(index) {
-        if (width >= 768) {
-            $(this).attr({ width: 720, height: 405 });
-        } else if (width >= 576 && width < 768) {
-            $(this).attr({ width: 560, height: 315 });
-        } else {
-            $(this).attr({ width: 360, height: 205 });
-        }
-    });
-
-    $(window).on('resize', function() {
-        var width = $(window).width();
-        var height = $(window).height();
-        $("iframe").each(function(index) {
-            if (width >= 768) {
-                $(this).attr({ width: 720, height: 405 });
-            } else if (width >= 576 && width < 768) {
-                $(this).attr({ width: 540, height: 324 });
-            } else if (width >= 512 && width < 576) {
-                $(this).attr({ width: 450, height: 254 });
-            } else {
-                $(this).attr({ width: 360, height: 203 });
-            }
-        });
-    });
-
     //Discography carousel
     $('.slick-discography').slick({
         dots: true,
@@ -59,9 +30,6 @@ $(document).ready(function() {
                     infinite: true
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
 
@@ -115,6 +83,9 @@ $(document).ready(function() {
                 window.open($(this).attr("data-link"));
             }
         } else {
+        	if ($(this).parent().hasClass("video-popup")){
+        		return 0;
+        	}
             window.open($(this).attr("data-link"));
         }
     });
@@ -148,5 +119,32 @@ $(document).ready(function() {
         $(".navbar-collapse").collapse('hide');
     });
 
+    //Magnific popup
+    $('.video-item').magnificPopup({
+        type: 'iframe'
+    });
+
+
+    //Video popup height change
+    var video_popup_height = $(".video-thumb").height();
+    $(".video-popup").css('width', video_popup_height / 9 * 16);
+
+    $(window).on('resize', function() {
+        if ($(".video-thumb").sizeChanged()) {
+            var video_popup_height = $(".video-thumb").height();
+            $(".video-popup").css('width', video_popup_height / 9 * 16);
+        }
+    });
+
+    //Hover on album thumb function
+    $(".video-popup").hover(
+        function() {
+            $(this).css("display", "flex");
+            $(this).animate({ opacity: 0.75 }, { duration: 200 });
+        },
+        function() {
+            $(this).animate({ opacity: 0 }, { duration: 200 });
+        }
+    );
 
 });

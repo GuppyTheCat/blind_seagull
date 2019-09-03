@@ -11,15 +11,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
-    <!--JQuery UI-->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Muli&display=swap" rel="stylesheet">
     <!-- Slick(carousel) -->
     <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/glitch.css" rel="stylesheet">
 </head>
@@ -237,12 +235,22 @@
                     <h2>VIDEO</h2>
                 </div>
             </div>
-            <div id="video" class="row">
-                <div class="video-item col-12 d-flex justify-content-center">
-                    <iframe width="720" height="405" src="https://www.youtube.com/embed/D1XhAV9rDtw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div id="video">
+                <div class="video-item row" data-mfp-src="https://www.youtube.com/watch?v=D1XhAV9rDtw">
+                    <div class="video-thumb col-12 d-flex justify-content-center row">
+                        <div class="video-popup col-12 d-flex justify-content-center align-items-center">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="img/video1.jpg">
+                    </div>
                 </div>
-                <div class="video-item col-12 d-flex justify-content-center">
-                    <iframe width="720" height="405" src="https://www.youtube.com/embed/RQ36GDfOfT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video-item row" data-mfp-src="https://www.youtube.com/watch?v=RQ36GDfOfT8">
+                    <div class="video-thumb col-12 d-flex justify-content-center row">
+                        <div class="video-popup col-12 d-flex justify-content-center align-items-center">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <img src="img/video2.jpg">
+                    </div>
                 </div>
             </div>
         </div>
@@ -284,22 +292,25 @@
             </div>
         </div>
     </div>
-    <div class="content-section container" id="footer">
+    <footer class="content-section container">
         <div id="top-button">
             <a class="nav-link" href="#top-header">BACK TO TOP</a>
         </div>
-    </div>
-    <!--<div id="anchor-contact"></div>
-    <div class="content-section container" id="contact-section">
-    </div>-->
+    </footer>
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--JQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
     <!-- Slick(carousel) -->
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <!-- Magnific Popup core JS file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 
