@@ -148,6 +148,6 @@ $(document).ready(function() {
     );
 
     //Smooth scroll
-    $("html").smoothWheel();
+    //$("html").smoothWheel();
 });
 
