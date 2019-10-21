@@ -149,5 +149,8 @@ $(document).ready(function() {
 
     //Smooth scroll
     //$("html").smoothWheel();
+    $(function() {  
+        $("body").niceScroll();
+    });
 });
 
